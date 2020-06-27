@@ -10,7 +10,9 @@
     "eslint": "node_modules/.bin/eslint pages/"
   },
   "dependencies": {
+    "mongodb": "^3.5.9",
     "next": "9.4.4",
+    "next-connect": "^0.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
@@ -35,11 +37,11 @@
       "pre-commit": "lint-staged"
     }
   },
-    "lint-staged": {
-      "pages/**/*.{js,jsx,ts,tsx,json,css}": [
-        "prettier --write",
-        "eslint --fix pages/",
-        "git add"
-      ]
-    }
+  "lint-staged": {
+    "pages/**/*.{js,jsx,ts,tsx,json,css}": [
+      "prettier --write",
+      "eslint --fix pages/",
+      "git add"
+    ]
   }
+}
