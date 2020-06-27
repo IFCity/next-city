@@ -1,17 +1,10 @@
 import React from 'react'
+import Link from 'next/link'
 
-const Home: React.FunctionComponent = () => (
+const Events: React.FunctionComponent = () => (
   <div>
-    <p>Hello! </p>
-    <p>Hello! </p>
-    <p>Hello! </p>
-    <p>Hello! </p>
-    <p>Hello! </p>
-    <p>Hello! </p>
-    <p>Hello! </p>
-    <p>Hello! </p>
-    <p>Hello! </p>
-    <p>Hello! </p>
+    <h1>Events</h1>
+    <Link href="/">Home</Link>
   </div>
 )
-export default Home
+export default Events
