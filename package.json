@@ -31,7 +31,7 @@
     "typescript": "^3.9.5"
   },
   "lint-staged": {
-    "*.{js, tsx}": [
+    "*.{ts,tsx}": [
       "node_modules/.bin/eslint --max-warnings=0",
       "prettier --write",
       "git add"
