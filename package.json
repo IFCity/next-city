@@ -30,11 +30,16 @@
     "prettier": "^2.0.5",
     "typescript": "^3.9.5"
   },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "node_modules/.bin/eslint --max-warnings=0",
-      "prettier --write",
-      "git add"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+    "lint-staged": {
+      "pages/**/*.{js,jsx,ts,tsx,json,css}": [
+        "prettier --write",
+        "eslint --fix pages/",
+        "git add"
+      ]
+    }
   }
-}
