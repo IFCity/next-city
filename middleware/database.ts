@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb'
 import nextConnect from 'next-connect'
 
 const client = new MongoClient(
-  'mongodb+srv://test9731:test9731@testcluster.dv1ko.mongodb.net/<dbname>?retryWrites=true&w=majority',
+  process.env.NEXT_PUBLIC_DB_URI as string,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
