@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Events: React.FunctionComponent = ({ data }: any) => (
   <div>
-    <h1>Events</h1>
+    <h1>Next City Events</h1>
     <Link href="/">Home</Link>
     <ul>
       {data.map(({ title, _id }: any) => (
