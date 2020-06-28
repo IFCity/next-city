@@ -5,13 +5,13 @@ const handler = nextConnect()
 
 handler.use(middleware)
 
-handler.get(async (req, res) => {
+handler.get(async (req: any, res: any) => {
   await req.db
     .collection('events')
     .find()
-    .toArray(function (err, docs) {
+    .toArray(function (err: any, docs: any) {
       res.json(docs)
     })
 })
 
-export default (req, res) => handler.apply(req, res)
+export default (req: any, res: any) => handler.apply(req, res)

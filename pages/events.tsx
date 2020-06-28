@@ -1,12 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Events: React.FunctionComponent = ({ data }) => (
+const Events: React.FunctionComponent = ({ data }: any) => (
   <div>
     <h1>Events</h1>
     <Link href="/">Home</Link>
     <ul>
-      {data.map(({ title, _id }) => (
+      {data.map(({ title, _id }: any) => (
         <li key={`event-${_id}`}>
           <Link href={`/events/${_id}`}>{title}</Link>
         </li>
