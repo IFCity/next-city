@@ -17,7 +17,7 @@ const Events: React.FunctionComponent = ({ data }: any) => (
 export default Events
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/events')
+  const res = await fetch('https://next-city.gzoreslav.vercel.app/api/events')
   const json = await res.json()
   return { props: { data: json } }
 }
