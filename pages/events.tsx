@@ -6,9 +6,9 @@ const Events: React.FunctionComponent = ({ data }: any) => (
     <h1>Next City Events</h1>
     <Link href="/">Home</Link>
     <ul>
-      {data.map(({ title, _id }: any) => (
+      {data.map(({ name, _id }: any) => (
         <li key={`event-${_id}`}>
-          <Link href={`/events/${_id}`}>{title}</Link>
+          <Link href={`/events/${_id}`}>{name}</Link>
         </li>
       ))}
     </ul>
