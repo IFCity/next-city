@@ -5,11 +5,11 @@ jobs:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps:
-      - working-directory: ./next-city
-      - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: test # will run `yarn test` command
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: install
+        working-directory: ./next-city
+        run: yarn install
+      - name: run tests
+        working-directory: ./next-city
+        run: yarn test
