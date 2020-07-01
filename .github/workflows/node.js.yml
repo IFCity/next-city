@@ -1,15 +1,24 @@
-name: CI/TEST
+name: CI TEST
+
 on: [push]
+
 jobs:
-  build:
-    name: Unit Tests
+
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - name: install
-        working-directory: ./next-city
-        run: yarn install
-      - name: run tests
-        working-directory: ./next-city
-        run: yarn test
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Set Node.js 10.x
+      uses: actions/setup-node@master
+      with:
+        version: 14.x
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Run test
+      run: |
+        npm run test
