@@ -1,4 +1,4 @@
-name: CI TEST
+name: TESTS
 on:
   pull_request:
     branches:
