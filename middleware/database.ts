@@ -1,13 +1,11 @@
 import { MongoClient } from 'mongodb'
 import nextConnect from 'next-connect'
+import config from '../config'
 
-const client = new MongoClient(
-  process.env.NEXT_PUBLIC_DB_URI as string,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-)
+const client = new MongoClient(config.api.dbUri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
 
 async function database(req: any, res: any, next: () => any) {
   if (!client.isConnected()) await client.connect()

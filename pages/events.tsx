@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import config from '../config'
 
 const Events: React.FunctionComponent = ({ data }: any) => (
   <div>
-    <h1>Next City Events</h1>
+    <h1>{config.general.siteName} - Events</h1>
     <Link href="/">Home</Link>
     <ul>
       {data.map(({ name, description, category, _id }: any) => (
@@ -19,7 +20,7 @@ const Events: React.FunctionComponent = ({ data }: any) => (
 export default Events
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/events`)
+  const res = await fetch(`${config.api.baseUrl}/api/events`)
   const json = await res.json()
   return { props: { data: json } }
 }
