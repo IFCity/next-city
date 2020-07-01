@@ -1,3 +1,5 @@
+![CI TEST](https://github.com/gzoreslav/next-city/workflows/CI%20TEST/badge.svg)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
