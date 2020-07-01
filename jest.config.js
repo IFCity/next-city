@@ -4,7 +4,7 @@ module.exports = {
         "<rootDir>"
     ],
     "preset": 'ts-jest',
-    "setupFilesAfterEnv": ["<rootDir>/tests/setupTests.ts"],
+    "setupFilesAfterEnv": ["<rootDir>/setupTests.ts"],
     "transform": {
         "^.+\\.tsx?$": "ts-jest"
     },

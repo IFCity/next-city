@@ -53,13 +53,13 @@
     "(pages|tests|middleware)/**/*.{js,jsx,ts,tsx,json,css}": [
       "prettier --write",
       "eslint --fix pages/",
-      "test",
+      "jest",
       "git add"
     ]
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "<rootDir>/tests/setupTests.ts"
+      "<rootDir>/setupTests.ts"
     ]
   }
 }
