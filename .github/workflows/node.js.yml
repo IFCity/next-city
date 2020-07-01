@@ -5,6 +5,7 @@ jobs:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps:
+      - working-directory: ./next-city
       - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.0.0
         with:
