@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import config from '../config'
+import Footer from '../components/footer'
 
 const Events: React.FunctionComponent = ({ data }: any) => (
   <div>
@@ -15,6 +16,7 @@ const Events: React.FunctionComponent = ({ data }: any) => (
         </li>
       ))}
     </ul>
+    <Footer />
   </div>
 )
 export default Events
