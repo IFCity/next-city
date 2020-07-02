@@ -13,10 +13,13 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "mongodb": "^3.5.9",
     "next": "9.4.4",
     "next-connect": "^0.7.2",
+    "nprogress": "^0.2.0",
     "react": "16.13.1",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
@@ -51,7 +54,7 @@
     }
   },
   "lint-staged": {
-    "(pages|tests|middleware|config)/**/*.{js,jsx,ts,tsx,json,css}": [
+    "(pages|tests|middleware|config|components)/**/*.{js,jsx,ts,tsx,json,css}": [
       "prettier --write",
       "eslint --fix pages/",
       "git add"
