@@ -5,7 +5,7 @@ import React from 'react'
 const Layout: React.FunctionComponent = ({ children }) => (
   <>
     <Header />
-    <main>{children}</main>
+    <main id="main">{children}</main>
     <Footer />
   </>
 )
